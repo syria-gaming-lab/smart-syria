@@ -1,0 +1,119 @@
+{
+  "identity": {
+    "name": "Syria Gaming Lab - Cohort 2 Application",
+    "tone": "Retro, Underground, High-Energy, 8-bit, Arcade",
+    "aesthetic": "Pixel Art, CRT Terminal, Glitch, Cyberpunk-Lite",
+    "primary_audience": "Game Developers, Artists, Writers in Syria"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Handjet, 'Press Start 2P', cursive",
+      "body": "'Space Mono', 'Courier Prime', monospace",
+      "arabic": "Handjet, 'Noto Kufi Arabic', sans-serif"
+    },
+    "weights": {
+      "regular": 400,
+      "bold": 700,
+      "black": 900
+    },
+    "scale": {
+      "h1": "text-4xl md:text-6xl tracking-tighter leading-none",
+      "h2": "text-3xl md:text-5xl tracking-tight",
+      "h3": "text-xl md:text-3xl",
+      "body": "text-base md:text-lg leading-relaxed",
+      "caption": "text-xs md:text-sm uppercase tracking-widest"
+    },
+    "imports": [
+      "https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Kufi+Arabic:wght@100..900&display=swap"
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "foreground": "#F3F4F6",
+      "primary": "#FF3B3B",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#4ADE80",
+      "secondary_foreground": "#000000",
+      "accent": "#FACC15",
+      "muted": "#1F2937",
+      "border": "#374151",
+      "destructive": "#EF4444"
+    },
+    "gradients": {
+      "hero": "linear-gradient(180deg, rgba(5,5,5,0) 0%, #050505 100%)",
+      "scanline": "linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))"
+    }
+  },
+  "layout": {
+    "container": "max-w-5xl mx-auto px-4 md:px-8",
+    "spacing": {
+      "section": "py-12 md:py-24",
+      "element": "mb-6 md:mb-8"
+    },
+    "grid": {
+      "marketing": "grid grid-cols-1 md:grid-cols-12 gap-8",
+      "form": "grid grid-cols-1 md:grid-cols-2 gap-6"
+    },
+    "border_radius": {
+      "default": "0px",
+      "button": "0px",
+      "input": "0px"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#FF3B3B] text-white font-['Press_Start_2P'] text-xs md:text-sm px-6 py-4 border-2 border-white shadow-[4px_4px_0px_0px_#FFFFFF] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#FFFFFF] transition-all active:translate-y-[4px] active:shadow-none uppercase",
+      "secondary": "bg-transparent text-[#4ADE80] font-['Space_Mono'] border-2 border-[#4ADE80] px-6 py-4 hover:bg-[#4ADE80] hover:text-black transition-colors uppercase tracking-widest"
+    },
+    "inputs": {
+      "default": "bg-black border-2 border-[#374151] text-white font-['Space_Mono'] p-4 focus:border-[#FF3B3B] focus:ring-0 focus:outline-none placeholder:text-gray-600 transition-colors",
+      "error": "border-red-500 focus:border-red-500"
+    },
+    "cards": {
+      "default": "bg-[#0A0A0A] border-2 border-[#374151] p-6 md:p-8 relative overflow-hidden group hover:border-[#FF3B3B] transition-colors"
+    },
+    "badges": {
+      "default": "bg-[#1F2937] text-white px-2 py-1 text-xs font-['Press_Start_2P'] uppercase border border-gray-600"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "pixel": "4px 4px 0px 0px",
+      "pixel_sm": "2px 2px 0px 0px"
+    },
+    "borders": {
+      "thick": "border-4 border-black",
+      "retro": "border-2 border-white"
+    },
+    "effects": {
+      "crt_overlay": "pointer-events-none fixed inset-0 z-50 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay",
+      "scanlines": "pointer-events-none fixed inset-0 z-40 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%]"
+    }
+  },
+  "assets": {
+    "logo": "/images/logos/smart-syria-logo.png",
+    "cover": "/images/smart-syria-cover.png",
+    "icons": {
+      "heart": "https://images.unsplash.com/photo-1638445533129-65aaf55fb94c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxwaXhlbCUyMGFydCUyMGdhbWUlMjBpY29ucyUyMHBvdGlvbiUyMHN3b3JkJTIwY29pbiUyMGhlYXJ0fGVufDB8fHx8MTc2OTI3NDgxNHww&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Use 'Handjet' font for all Arabic text. It is the ONLY pixel-style font that supports Arabic well.",
+    "CRITICAL: Implement a 'Language Toggle' that switches between LTR (English) and RTL (Arabic). Ensure the layout flips correctly.",
+    "CRITICAL: Use the provided Logo and Cover image. The Cover image should be used in the Hero section, potentially with a pixelation filter or overlay.",
+    "STYLE: Do NOT use rounded corners (rounded-none). Everything must be sharp and blocky.",
+    "STYLE: Use the 'CRT Overlay' effect (scanlines) on the entire body to give it a retro screen feel.",
+    "FORM: Break the form into steps (Wizard). Do not show a long scrolling form. Use a 'Progress Bar' that looks like a Health Bar.",
+    "INPUTS: Checkboxes should look like [ ] and [x] in pixel art style (custom CSS).",
+    "ANIMATION: Use 'framer-motion' for page transitions. Slide sections in like a game level loading.",
+    "THEME: Force Dark Mode. There is no Light Mode for this app.",
+    "ACCESSIBILITY: Ensure the Red (#FF3B3B) text is only used on dark backgrounds where contrast is sufficient. Use White for main body text."
+  ],
+  "universal_guidelines": [
+    "Avoid generic 'AI slop' designs. Be bold with spacing and typography.",
+    "Use 'sonner' for toasts.",
+    "Use 'lucide-react' for icons, but try to stick to square/blocky icons where possible.",
+    "All interactive elements must have 'data-testid' attributes."
+  ]
+}

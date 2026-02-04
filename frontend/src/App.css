@@ -1,0 +1,80 @@
+/* Main App Styles - Pixel Art Gaming Theme */
+
+.App {
+    min-height: 100vh;
+    background-color: #050505;
+}
+
+/* Ensure all elements use border-box */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margins */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+/* Link styles */
+a {
+    color: #FF3B3B;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #FF6B6B;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+    outline: 2px solid #FF3B3B;
+    outline-offset: 2px;
+}
+
+/* Disable focus for non-keyboard interactions */
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+    background: #FF3B3B;
+    color: white;
+}
+
+/* Loading spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+}

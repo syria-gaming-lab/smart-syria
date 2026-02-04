@@ -1,0 +1,955 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&family=Handjet:wght@100..900&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Kufi+Arabic:wght@100..900&family=Cairo:wght@400;600;700;800;900&display=swap');
+
+/* Madani Arabic Font Family - Smart Syria */
+@font-face {
+  font-family: 'Madani Arabic';
+  src: url('./fonts/MadaniArabicDEMO-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Madani Arabic';
+  src: url('./fonts/MadaniArabicDEMO-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Madani Arabic';
+  src: url('./fonts/MadaniArabicDEMO-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Madani Arabic';
+  src: url('./fonts/MadaniArabicDEMO-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* BoldPixels Font for English title - Smart Syria (using Press Start 2P as fallback) */
+@font-face {
+  font-family: 'BoldPixels';
+  src: local('Press Start 2P');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* PixelAE Font for Arabic title - Smart Syria (using Handjet as fallback) */
+@font-face {
+  font-family: 'PixelAE';
+  src: local('Handjet');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tajawal utility class for modern Arabic font */
+.font-tajawal {
+  font-family: 'Tajawal', sans-serif !important;
+}
+
+/* Madani Arabic utility classes */
+.madani-thin {
+  font-family: 'Madani Arabic', sans-serif !important;
+  font-weight: 100 !important;
+}
+.madani-regular {
+  font-family: 'Madani Arabic', sans-serif !important;
+  font-weight: 400 !important;
+}
+.madani-bold {
+  font-family: 'Madani Arabic', sans-serif !important;
+  font-weight: 700 !important;
+}
+.madani-black {
+  font-family: 'Madani Arabic', sans-serif !important;
+  font-weight: 900 !important;
+}
+
+/* BoldPixels utility class for English title */
+.font-boldpixels {
+  font-family: 'BoldPixels', monospace !important;
+}
+
+/* PixelAE utility class for Arabic title */
+.font-pixelae {
+  font-family: 'PixelAE', monospace !important;
+}
+
+/* Noto Sans for general text */
+.font-noto {
+  font-family: 'Noto Sans Arabic', 'Noto Sans', sans-serif !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #050505;
+    --foreground: #F3F4F6;
+    --primary: #FF3B3B;
+    --primary-foreground: #FFFFFF;
+    --secondary: #4ADE80;
+    --secondary-foreground: #000000;
+    --accent: #FACC15;
+    --muted: #1F2937;
+    --border: #374151;
+    --destructive: #EF4444;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Mono', 'Courier Prime', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+}
+
+/* Arabic text styling - BOLD and CLEAR */
+.font-arabic {
+    font-family: 'Cairo', 'Noto Kufi Arabic', sans-serif;
+    font-weight: 700;
+}
+
+/* Pixel font for headings */
+.font-pixel {
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Handjet for Arabic pixel style - BOLDER */
+.font-handjet {
+    font-family: 'Handjet', sans-serif;
+    font-weight: 800;
+}
+
+/* CRT Scanlines Effect */
+.crt-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: 
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.015), rgba(0, 0, 255, 0.03));
+    background-size: 100% 4px, 3px 100%;
+    opacity: 0.6;
+}
+
+/* 3D Title Effect */
+.title-3d {
+    position: relative;
+    display: inline-block;
+    color: #FF3B3B;
+    text-shadow: 
+        3px 3px 0px #fff,
+        6px 6px 0px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.title-3d:hover {
+    transform: translate(-3px, -3px);
+    text-shadow: 
+        3px 3px 0px #fff,
+        6px 6px 0px rgba(255,59,59,0.5),
+        9px 9px 0px rgba(0,0,0,0.3);
+}
+
+/* 3D Title Effect for Arabic - closer shadow */
+.title-3d-arabic {
+    position: relative;
+    display: inline-block;
+    color: #FF3B3B;
+    text-shadow: 
+        1px 1px 0px #fff,
+        2px 2px 0px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.title-3d-arabic:hover {
+    transform: translate(-2px, -2px);
+    text-shadow: 
+        1px 1px 0px #fff,
+        2px 2px 0px rgba(255,59,59,0.5),
+        3px 3px 0px rgba(0,0,0,0.3);
+}
+
+/* Animated Pointing Finger */
+@keyframes point-finger {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(8px) scale(0.9);
+    }
+}
+
+@keyframes point-finger-rtl {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    50% {
+        transform: translateX(-8px) scale(0.9);
+    }
+}
+
+.animate-point-finger {
+    animation: point-finger 0.6s ease-in-out infinite;
+}
+
+.animate-point-finger-rtl {
+    animation: point-finger-rtl 0.6s ease-in-out infinite;
+}
+
+/* Cohort Badge Enhanced */
+.cohort-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #FACC15 0%, #F59E0B 100%);
+    color: #000;
+    border: 3px solid #fff;
+    box-shadow: 4px 4px 0px 0px #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+.cohort-badge:hover {
+    transform: translate(-2px, -2px) scale(1.05);
+    box-shadow: 6px 6px 0px 0px #fff;
+    background: linear-gradient(135deg, #FDE047 0%, #FACC15 100%);
+}
+
+@keyframes badge-pulse {
+    0%, 100% { box-shadow: 4px 4px 0px 0px #fff; }
+    50% { box-shadow: 4px 4px 10px 2px rgba(250, 204, 21, 0.5); }
+}
+
+/* Pixel Art Checkbox */
+.pixel-checkbox {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #000;
+    border: 3px solid var(--border);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.1s;
+}
+
+.pixel-checkbox:checked {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.pixel-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.pixel-checkbox:hover {
+    border-color: var(--primary);
+}
+
+/* Pixel Art Radio */
+.pixel-radio {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #000;
+    border: 3px solid var(--border);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.1s;
+}
+
+.pixel-radio:checked {
+    border-color: var(--primary);
+}
+
+.pixel-radio:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background: #fa91ba;
+}
+
+.pixel-radio:hover {
+    border-color: var(--primary);
+}
+
+/* Pixel Input */
+.pixel-input {
+    background: #000;
+    border: 3px solid var(--border);
+    color: var(--foreground);
+    padding: 12px 16px;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.pixel-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.pixel-input::placeholder {
+    color: #4B5563;
+}
+
+/* Pixel Select/Dropdown */
+.pixel-select {
+    background: #000;
+    border: 3px solid var(--border);
+    color: var(--foreground);
+    padding: 12px 16px;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FF3B3B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    padding-right: 48px;
+}
+
+.pixel-select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.pixel-select option {
+    background: #0A0A0A;
+    color: var(--foreground);
+    padding: 12px;
+}
+
+/* Pixel Textarea */
+.pixel-textarea {
+    background: #000;
+    border: 3px solid var(--border);
+    color: var(--foreground);
+    padding: 12px 16px;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+.pixel-textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Pixel Button */
+.pixel-btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    padding: 16px 24px;
+    border: 3px solid white;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0px 0px white;
+    transition: all 0.1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.pixel-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px white;
+}
+
+.pixel-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+.pixel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pixel-btn-secondary {
+    background: transparent;
+    border-color: var(--secondary);
+    color: var(--secondary);
+    box-shadow: 4px 4px 0px 0px var(--secondary);
+}
+
+.pixel-btn-secondary:hover {
+    box-shadow: 2px 2px 0px 0px var(--secondary);
+    background: var(--secondary);
+    color: black;
+}
+
+/* Health Bar Progress */
+.health-bar {
+    height: 24px;
+    background: #1F2937;
+    border: 3px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.health-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), #FF6B6B);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.health-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Pixel Card */
+.pixel-card {
+    background: #0A0A0A;
+    border: 3px solid var(--border);
+    padding: 24px;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+.pixel-card:hover {
+    border-color: var(--primary);
+}
+
+/* Particle Container */
+.particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+/* Particle Animation */
+@keyframes particle-fly {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) scale(0);
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    border: 2px solid white;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    animation: particle-fly 1s ease-out forwards;
+}
+
+/* Success Particles */
+@keyframes confetti-fall {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+
+.confetti {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    animation: confetti-fall 3s ease-out forwards;
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.glitch:hover {
+    animation: glitch 0.3s ease-in-out infinite;
+}
+
+/* Logo Bounce Glow Animation - Purple for Top-Tech */
+@keyframes logo-bounce-purple {
+    0% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 0px #A855F7);
+    }
+    15% {
+        transform: translateY(-25px) scale(1.1);
+        filter: drop-shadow(0 0 20px #A855F7) drop-shadow(0 0 40px #C084FC);
+    }
+    30% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 10px #A855F7);
+    }
+    45% {
+        transform: translateY(-15px) scale(1.05);
+        filter: drop-shadow(0 0 30px #A855F7) drop-shadow(0 0 20px #C084FC);
+    }
+    60% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 15px #A855F7);
+    }
+    75% {
+        transform: translateY(-8px) scale(1.02);
+        filter: drop-shadow(0 0 25px #A855F7) drop-shadow(0 0 15px #C084FC);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 0px #A855F7);
+    }
+}
+
+.logo-bounce-purple {
+    animation: logo-bounce-purple 1.5s ease-in-out !important;
+}
+
+/* Logo Bounce Glow Animation - Red for main logo */
+@keyframes logo-bounce-red {
+    0% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 0px #FF3B3B);
+    }
+    15% {
+        transform: translateY(-25px) scale(1.1);
+        filter: drop-shadow(0 0 20px #FF3B3B) drop-shadow(0 0 40px #FF3B3B);
+    }
+    30% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 10px #FF3B3B);
+    }
+    45% {
+        transform: translateY(-15px) scale(1.05);
+        filter: drop-shadow(0 0 30px #FF3B3B) drop-shadow(0 0 20px #FF6B6B);
+    }
+    60% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 15px #FF3B3B);
+    }
+    75% {
+        transform: translateY(-8px) scale(1.02);
+        filter: drop-shadow(0 0 25px #FF3B3B) drop-shadow(0 0 15px #FF6B6B);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 0px #FF3B3B);
+    }
+}
+
+/* Logo Bounce Glow Animation - Sky Blue for Sanad */
+@keyframes logo-bounce-blue {
+    0% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 0px #38BDF8);
+    }
+    15% {
+        transform: translateY(-25px) scale(1.1);
+        filter: drop-shadow(0 0 20px #38BDF8) drop-shadow(0 0 40px #7DD3FC);
+    }
+    30% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 10px #38BDF8);
+    }
+    45% {
+        transform: translateY(-15px) scale(1.05);
+        filter: drop-shadow(0 0 30px #38BDF8) drop-shadow(0 0 20px #7DD3FC);
+    }
+    60% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 15px #38BDF8);
+    }
+    75% {
+        transform: translateY(-8px) scale(1.02);
+        filter: drop-shadow(0 0 25px #38BDF8) drop-shadow(0 0 15px #7DD3FC);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 0px #38BDF8);
+    }
+}
+
+.logo-bounce-red {
+    animation: logo-bounce-red 1.5s ease-in-out !important;
+}
+
+.logo-bounce-blue {
+    animation: logo-bounce-blue 1.5s ease-in-out !important;
+}
+
+/* Float Animation with subtle glow - Red */
+@keyframes float-red {
+    0%, 100% { 
+        transform: translateY(0);
+        filter: drop-shadow(0 0 2px rgba(255, 59, 59, 0.3));
+    }
+    50% { 
+        transform: translateY(-10px);
+        filter: drop-shadow(0 0 15px rgba(255, 59, 59, 1)) drop-shadow(0 0 25px rgba(255, 59, 59, 0.6));
+    }
+}
+
+/* Float Animation with subtle glow - Blue */
+@keyframes float-blue {
+    0%, 100% { 
+        transform: translateY(0);
+        filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.3));
+    }
+    50% { 
+        transform: translateY(-10px);
+        filter: drop-shadow(0 0 15px rgba(56, 189, 248, 1)) drop-shadow(0 0 25px rgba(56, 189, 248, 0.6));
+    }
+}
+
+/* Float Animation with subtle glow - Purple */
+@keyframes float-purple {
+    0%, 100% { 
+        transform: translateY(0);
+        filter: drop-shadow(0 0 2px rgba(168, 85, 247, 0.3));
+    }
+    50% { 
+        transform: translateY(-10px);
+        filter: drop-shadow(0 0 15px rgba(168, 85, 247, 1)) drop-shadow(0 0 25px rgba(168, 85, 247, 0.6));
+    }
+}
+
+.float-red {
+    animation: float-red 3s ease-in-out infinite;
+}
+
+.float-blue {
+    animation: float-blue 3s ease-in-out infinite;
+}
+
+.float-purple {
+    animation: float-purple 3s ease-in-out infinite;
+}
+
+/* Float Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Blink Animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary); }
+    50% { box-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary); }
+}
+
+.pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Pixel Star Animation */
+@keyframes pixel-star-bounce {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(10deg); }
+}
+
+.pixel-star {
+    animation: pixel-star-bounce 1s ease-in-out infinite;
+}
+
+/* Victory Animation */
+@keyframes victory-bounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-20px) scale(1.1); }
+    50% { transform: translateY(0) scale(1); }
+    75% { transform: translateY(-10px) scale(1.05); }
+}
+
+.victory-bounce {
+    animation: victory-bounce 1s ease-in-out;
+}
+
+/* Success Screen Styles */
+.success-screen {
+    background: radial-gradient(ellipse at center, #1a1a2e 0%, #050505 100%);
+}
+
+.success-title {
+    text-shadow: 
+        0 0 10px #4ADE80,
+        0 0 20px #4ADE80,
+        0 0 30px #4ADE80,
+        0 0 40px #4ADE80;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    font-family: 'Cairo', 'Noto Kufi Arabic', sans-serif;
+}
+
+[dir="rtl"] .pixel-checkbox:checked::after {
+    left: auto;
+    right: 5px;
+}
+
+[dir="rtl"] .pixel-select {
+    background-position: left 12px center;
+    padding-left: 48px;
+    padding-right: 16px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1F2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border: 2px solid #1F2937;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF6B6B;
+}
+
+/* Table Styling */
+.pixel-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Space Mono', monospace;
+}
+
+.pixel-table th,
+.pixel-table td {
+    border: 2px solid var(--border);
+    padding: 12px;
+    text-align: left;
+}
+
+.pixel-table th {
+    background: #1F2937;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.pixel-table tr:hover {
+    background: #0F0F0F;
+}
+
+/* Badge */
+.pixel-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    text-transform: uppercase;
+    border: 2px solid;
+}
+
+.pixel-badge-pending {
+    background: #FACC15;
+    color: black;
+    border-color: #FACC15;
+}
+
+.pixel-badge-accepted {
+    background: var(--secondary);
+    color: black;
+    border-color: var(--secondary);
+}
+
+.pixel-badge-rejected {
+    background: var(--destructive);
+    color: white;
+    border-color: var(--destructive);
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.4s ease-out;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Stars background */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+/* Floating Planets */
+@keyframes planet-float {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg);
+    }
+    50% { 
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+@keyframes planet-float-reverse {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg);
+    }
+    50% { 
+        transform: translateY(10px) rotate(-5deg);
+    }
+}
+
+.planet {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.planet-purple {
+    animation: planet-float 8s ease-in-out infinite;
+}
+
+.planet-red {
+    animation: planet-float-reverse 10s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.planet-blue {
+    animation: planet-float 7s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.planet-yellow {
+    animation: planet-float-reverse 9s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.planet-green {
+    animation: planet-float 11s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+/* Firework animation */
+@keyframes firework-explode {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+/* Level Up Text */
+@keyframes level-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.level-up-text {
+    animation: level-up 0.8s ease-out;
+}
