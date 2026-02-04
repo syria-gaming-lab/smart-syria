@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.a337fbbb.css",
-    "main.js": "/static/js/main.23e4ab55.js",
+    "main.css": "/static/css/main.9ddefea1.css",
+    "main.js": "/static/js/main.55c26b8f.js",
     "static/media/MadaniArabicDEMO-Bold.otf": "/static/media/MadaniArabicDEMO-Bold.9cc98919c081e6b6a2dd.otf",
     "static/media/MadaniArabicDEMO-Black.otf": "/static/media/MadaniArabicDEMO-Black.68fd105da92fc1b62d0c.otf",
     "static/media/MadaniArabicDEMO-Regular.otf": "/static/media/MadaniArabicDEMO-Regular.dbc9f1664647701d61fd.otf",
     "static/media/MadaniArabicDEMO-Thin.otf": "/static/media/MadaniArabicDEMO-Thin.7b6c81ac7e0dddf4aede.otf",
     "index.html": "/index.html",
-    "main.a337fbbb.css.map": "/static/css/main.a337fbbb.css.map",
-    "main.23e4ab55.js.map": "/static/js/main.23e4ab55.js.map"
+    "main.9ddefea1.css.map": "/static/css/main.9ddefea1.css.map",
+    "main.55c26b8f.js.map": "/static/js/main.55c26b8f.js.map"
   },
   "entrypoints": [
-    "static/css/main.a337fbbb.css",
-    "static/js/main.23e4ab55.js"
+    "static/css/main.9ddefea1.css",
+    "static/js/main.55c26b8f.js"
   ]
 }
