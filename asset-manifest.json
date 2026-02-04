@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/smart-syria/static/css/main.f98ce580.css",
-    "main.js": "/smart-syria/static/js/main.dad41e05.js",
-    "static/media/MadaniArabicDEMO-Bold.otf": "/smart-syria/static/media/MadaniArabicDEMO-Bold.9cc98919c081e6b6a2dd.otf",
-    "static/media/MadaniArabicDEMO-Black.otf": "/smart-syria/static/media/MadaniArabicDEMO-Black.68fd105da92fc1b62d0c.otf",
-    "static/media/MadaniArabicDEMO-Regular.otf": "/smart-syria/static/media/MadaniArabicDEMO-Regular.dbc9f1664647701d61fd.otf",
-    "static/media/MadaniArabicDEMO-Thin.otf": "/smart-syria/static/media/MadaniArabicDEMO-Thin.7b6c81ac7e0dddf4aede.otf",
-    "index.html": "/smart-syria/index.html",
-    "main.f98ce580.css.map": "/smart-syria/static/css/main.f98ce580.css.map",
-    "main.dad41e05.js.map": "/smart-syria/static/js/main.dad41e05.js.map"
+    "main.css": "/static/css/main.a337fbbb.css",
+    "main.js": "/static/js/main.863af4c0.js",
+    "static/media/MadaniArabicDEMO-Bold.otf": "/static/media/MadaniArabicDEMO-Bold.9cc98919c081e6b6a2dd.otf",
+    "static/media/MadaniArabicDEMO-Black.otf": "/static/media/MadaniArabicDEMO-Black.68fd105da92fc1b62d0c.otf",
+    "static/media/MadaniArabicDEMO-Regular.otf": "/static/media/MadaniArabicDEMO-Regular.dbc9f1664647701d61fd.otf",
+    "static/media/MadaniArabicDEMO-Thin.otf": "/static/media/MadaniArabicDEMO-Thin.7b6c81ac7e0dddf4aede.otf",
+    "index.html": "/index.html",
+    "main.a337fbbb.css.map": "/static/css/main.a337fbbb.css.map",
+    "main.863af4c0.js.map": "/static/js/main.863af4c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.f98ce580.css",
-    "static/js/main.dad41e05.js"
+    "static/css/main.a337fbbb.css",
+    "static/js/main.863af4c0.js"
   ]
 }
