@@ -7,10 +7,10 @@
       // Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 1;
+      // Set to 0 for root domain (smart-syria.org), use 1 for subdirectory (user.github.io/repo)
+      var pathSegmentsToKeep = 0;
 
       var l = window.location;
-      if (l.href.indexOf('/?/') !== -1) return;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
